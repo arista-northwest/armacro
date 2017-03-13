@@ -8,8 +8,11 @@ Vagrant.configure(2) do |config|
 end
 
 $script = <<SCRIPT
-dnf update -y 
+dnf update -y
 dnf install -y @development-tools
 dnf install -y fedora-packager
 dnf install -y rpmdevtools
+
+pip install arcomm sh
+pip install git+https://github.com/aristanetworks/arcomm.git
 SCRIPT
